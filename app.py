@@ -40,7 +40,6 @@ def visit(
     # If no sensor choose return the visit for the whole store
     if sensor_id is None:
         visit_counts = store_dict[store_name].get_all_traffic(date(year, month, day))
-    visit_counts = store_dict[store_name].get_store_traffic
     else:
         visit_counts = store_dict[store_name].get_sensor_traffic(
             sensor_id, date(year, month, day)
